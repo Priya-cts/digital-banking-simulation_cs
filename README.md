@@ -2,9 +2,7 @@
 # 🇮🇳 Indian Net Bank  
 ### A Banking Project (Case Study)
 
-<p align="center">
-  ![Project Logo](./images/Designer.png)
-</p>
+!Logo
 
 ## 📌 Overview  
 Indian Net Bank is a simulated online banking system designed as a **case study project** to understand the workflows, modules, and architecture of internet banking applications.  
@@ -28,36 +26,16 @@ This project demonstrates core banking operations such as user authentication, a
 indian-net-bank/
 │
 ├── backend/
-│   ├── controllers/
-│   ├── routes/
-│   ├── models/
-│   ├── services/
-│   ├── config/
-│   └── app.js
-│
 ├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   └── App.js
-│   └── package.json
-│
 ├── database/
-│   ├── schema.sql
-│   └── seed.sql
-│
 ├── docs/
 │   ├── architecture-diagram.png
 │   ├── project-report.pdf
 │   ├── API-specifications.md
 │   └── screenshots/
-│
 ├── tests/
 │   ├── backend/
 │   └── frontend/
-│
 ├── .gitignore
 ├── README.md
 └── LICENSE
@@ -77,5 +55,10 @@ indian-net-bank/
 
 ---
 
-## 📘 How to Run
+## 🧪 Testing
+- Test cases for backend & frontend are included under /tests.
+
+---
+## 🙌 Author  
+- Manish Kumar Dubey 
 
