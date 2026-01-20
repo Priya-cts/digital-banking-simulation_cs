@@ -63,9 +63,9 @@ indian-net-bank/
 ---
 
 ## 🛠️ Tech Stack (Example)
-- **Frontend**: React / HTML / CSS / Bootstrap  
-- **Backend**: Node.js / Express / Java  
-- **Database**: MySQL / PostgreSQL  
+- **Frontend**: Angular / HTML / CSS  
+- **Backend**: Asp.Net
+- **Database**: MySQL  
 - **Tools**: Postman, Git, VS Code  
 
 ---
@@ -77,8 +77,3 @@ indian-net-bank/
 
 ## 📘 How to Run
 
-### Backend
-```bash
-cd backend
-npm install
-npm start
