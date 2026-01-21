@@ -1,5 +1,5 @@
 
-# Team Name(Group2) - Blueprint Brigade
+### Team Name(Group2) - Blueprint Brigade
 ---
 # 🇮🇳 Indian Net Bank  
 ### A Banking Project (Case Study)
