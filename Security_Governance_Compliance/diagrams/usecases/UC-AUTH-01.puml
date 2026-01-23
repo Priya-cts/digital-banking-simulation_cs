@@ -1,0 +1,17 @@
+@startuml UC-AUTH-01
+left to right direction
+actor Customer
+actor "AI Agent (verification)" as AI_Agent
+actor "Security / Ops Team" as Ops
+rectangle "iNB System" {
+  usecase "Attempt Login" as UC_Login
+  usecase "Automated Identity Verification" as UC_AIVerify
+  usecase "Manual Re-activation / Investigation" as UC_ManualUnlock
+}
+Customer --> UC_Login
+UC_Login --> UC_AIVerify
+AI_Agent --> UC_AIVerify
+UC_AIVerify .> UC_ManualUnlock : escalate if unresolved
+Ops --> UC_ManualUnlock
+UC_ManualUnlock --> Customer
+@enduml

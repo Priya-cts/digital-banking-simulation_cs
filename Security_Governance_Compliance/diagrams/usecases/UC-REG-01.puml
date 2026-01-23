@@ -1,0 +1,20 @@
+@startuml UC-REG-01
+left to right direction
+actor Customer
+actor "AI Agent (first-level)" as AI_Agent
+actor "Bank Onboarding Officer" as Officer
+rectangle "iNB System" {
+  usecase "Submit Registration" as UC_Submit
+  usecase "AI KYC Validation" as UC_AIValidate
+  usecase "Manual KYC Review" as UC_HumanReview
+  usecase "Generate Activation Letter" as UC_Activate
+}
+Customer --> UC_Submit
+UC_Submit --> UC_AIValidate
+AI_Agent --> UC_AIValidate
+UC_AIValidate .> UC_Activate : approves
+UC_AIValidate .> UC_HumanReview : escalates
+Officer --> UC_HumanReview
+UC_HumanReview --> UC_Activate : on approval
+UC_Activate --> Customer
+@enduml

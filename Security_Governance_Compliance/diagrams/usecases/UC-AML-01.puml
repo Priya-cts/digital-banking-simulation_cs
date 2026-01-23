@@ -1,0 +1,16 @@
+@startuml UC-AML-01
+left to right direction
+actor "Monitoring System" as Monitor
+actor "AI Agent (triage)" as AI_Agent
+actor "AML Officer" as AML
+rectangle "iNB AML Service" {
+  usecase "Evaluate Transactions" as UC_Evaluate
+  usecase "Enrich & Triage Alerts" as UC_Triage
+  usecase "Manual Investigation" as UC_Investigate
+}
+Monitor --> UC_Evaluate
+UC_Evaluate --> UC_Triage
+AI_Agent --> UC_Triage
+UC_Triage .> UC_Investigate : escalate uncertain/high-risk
+AML --> UC_Investigate
+@enduml

@@ -1,0 +1,17 @@
+@startuml UC-AUD-01
+left to right direction
+actor "Auditor / Regulator" as Auditor
+actor "AI Agent (evidence aggregator)" as AI_Agent
+actor "Internal Audit Lead" as AuditLead
+rectangle "iNB Audit Service" {
+  usecase "Request Evidence Package" as UC_Request
+  usecase "Aggregate Logs & Reports" as UC_Aggregate
+  usecase "Manual Validation / Remediation" as UC_Remedy
+}
+Auditor --> UC_Request
+UC_Request --> UC_Aggregate
+AI_Agent --> UC_Aggregate
+UC_Aggregate .> UC_Remedy : escalate if gaps
+AuditLead --> UC_Remedy
+UC_Remedy --> UC_Aggregate : provide missing items
+@enduml

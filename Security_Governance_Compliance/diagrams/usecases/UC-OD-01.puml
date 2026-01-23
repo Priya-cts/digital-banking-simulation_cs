@@ -1,0 +1,14 @@
+@startuml UC-OD-01
+left to right direction
+actor "Core Banking System (EOD)" as EOD
+actor "Ledger / Reconciliation" as Ledger
+rectangle "iNB System" {
+  usecase "Identify Negative Balances" as UC_Identify
+  usecase "Compute Daily Overdraft Charges" as UC_Compute
+  usecase "Post Charges to Accounts" as UC_Post
+}
+EOD --> UC_Identify
+UC_Identify --> UC_Compute
+UC_Compute --> UC_Post
+UC_Post --> Ledger
+@enduml

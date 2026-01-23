@@ -1,0 +1,19 @@
+@startuml UC-CHE-01
+left to right direction
+actor Customer
+actor "AI Agent (matching)" as AI_Agent
+actor Banker
+rectangle "iNB Cheque Service" {
+  usecase "Submit Cheque Slip" as UC_Submit
+  usecase "Match Physical Cheque" as UC_Match
+  usecase "Manual Review" as UC_Manual
+  usecase "Apply Clearance / Bounce" as UC_Clear
+}
+Customer --> UC_Submit
+UC_Submit --> UC_Match
+AI_Agent --> UC_Match
+UC_Match .> UC_Manual : escalate if ambiguous
+Banker --> UC_Manual
+UC_Manual --> UC_Clear
+UC_Clear --> Customer
+@enduml

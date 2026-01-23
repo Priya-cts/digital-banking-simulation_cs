@@ -1,0 +1,15 @@
+@startuml UC-REC-01
+left to right direction
+actor "Treasury / Reconciliation Officer" as Officer
+actor "AI Agent (reporting)" as AI_Agent
+rectangle "iNB Reporting Service" {
+  usecase "Request Reconciliation Report" as UC_Request
+  usecase "Aggregate Cheque Events" as UC_Aggregate
+  usecase "Flag Anomalies" as UC_Flag
+}
+Officer --> UC_Request
+UC_Request --> UC_Aggregate
+AI_Agent --> UC_Aggregate
+UC_Aggregate .> UC_Flag : anomalies
+UC_Flag --> Officer : notify
+@enduml

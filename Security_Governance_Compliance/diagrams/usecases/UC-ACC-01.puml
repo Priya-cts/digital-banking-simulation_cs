@@ -1,0 +1,15 @@
+@startuml UC-ACC-01
+left to right direction
+actor "Banking Operations Manager" as Manager
+actor "iNB System" as System
+actor "AI Agent (config validation)" as AI_Agent
+rectangle "Configuration Service" {
+  usecase "Update Limits & Min Balance" as UC_UpdateConfig
+  usecase "Validate Config" as UC_Validate
+}
+Manager --> UC_UpdateConfig
+UC_UpdateConfig --> UC_Validate
+AI_Agent --> UC_Validate
+UC_Validate --> System
+System --> Manager : confirm
+@enduml

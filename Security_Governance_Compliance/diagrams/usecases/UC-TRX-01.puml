@@ -1,0 +1,17 @@
+@startuml UC-TRX-01
+left to right direction
+actor Customer
+actor "AI Agent (validation/approval)" as AI_Agent
+actor "Human Approver" as Approver
+rectangle "iNB Transaction Service" {
+  usecase "Initiate Transfer / Payment" as UC_Initiate
+  usecase "Validate Business Rules" as UC_Validate
+  usecase "Manual Approval" as UC_ManualApproval
+}
+Customer --> UC_Initiate
+UC_Initiate --> UC_Validate
+AI_Agent --> UC_Validate
+UC_Validate .> UC_ManualApproval : escalate if exception
+Approver --> UC_ManualApproval
+UC_ManualApproval --> UC_Initiate : approve
+@enduml
