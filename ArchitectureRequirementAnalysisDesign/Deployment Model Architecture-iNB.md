@@ -84,7 +84,7 @@ UML deployment diagram updated to include firewall devices and zone boundaries.
 
 High-level UML deployment view of production topology with key nodes and trust boundaries.
 
-![](diagrams/CDM_DomainView.png)
+![](diagrams/DM_ProdDep.png)
 
 ## 5\. Environment Matrix (Dev / QA / UAT / Prod / DR)
 
@@ -108,13 +108,13 @@ Summary of environment characteristics aligned to controls and operational needs
 
 Active‑Passive DR view showing warm standby, replication, and RTO/RPO targets.
 
-![] (diagrams/DM_ProdDR.png)
+![](diagrams/DM_ProdDR.png)
 
 ## 7\. Backup and Restore Flow (UML Activity)
 
 Nightly backup, encrypted repositories, DR copy, and periodic restore validation.
 
-![] (diagrams/DM_Bkp_Restore.png)
+![](diagrams/DM_Bkp_Restore.png)
 
 ## 8\. Inputs Needed to Finalize Segmentation (If Available)
 
