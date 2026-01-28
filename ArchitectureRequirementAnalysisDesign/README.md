@@ -129,7 +129,7 @@
    [Architectural Style Specification-iNB.md](<Architectural Style Specification-iNB.md>)
 
    ## ADR - Architectural Style
-   [ADR_iNB_Architectural_Styles.md](ADR_iNB_Architectural_Styles.md)
+   [ADR_iNB_Architectural_Styles.md](<ADR_iNB_Architectural Styles.md>)
 
 </details>
 <details>
